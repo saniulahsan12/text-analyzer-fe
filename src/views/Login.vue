@@ -1,5 +1,5 @@
 <template>
-    <div id="login">
+    <div id="login" class="container">
         <h1>Login</h1>
         <div class="form-inputs">
             <label for="email">Email</label>
@@ -42,15 +42,3 @@
         }
     }
 </script>
-
-<style>
-
-#login .form-inputs {
-    padding-bottom: 10px;
-}
-
-#login .form-inputs label {
-    padding-right: 10px;
-}
-
-</style>
