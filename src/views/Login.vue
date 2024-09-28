@@ -29,10 +29,9 @@
             async login() {
                 if(this.input.email != "" && this.input.password != "") {
                     await axios.post('http://localhost:3313/api/auth/login', this.input).then(response =>{
-                        console.log(response.data.data);
                         localStorage.setItem('authData', JSON.stringify(response.data.data));
                         this.$emit("authenticated", true);
-                        this.$router.replace({ name: "Secure" });
+                        this.$router.replace({ name: "Dashboard" });
                     }).catch(error => {
                         alert(error.response.data.message);
                     });
